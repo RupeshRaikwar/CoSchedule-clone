@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/calendar.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="navbar-main">
+        <div id="navbar">
+            <div id="left">
+                <div id="bar-logo-div"><img src="https://coschedule.com/img/cos-logo-white.svg" alt=""></div>
+                
+                <div id="prod-div">Products</div>
+                
+              
+            
+            <div id="Cosh-div">Why CoSchedule</div>
+            <div id="resources-div">Resources</div>
+            <a id="a-tag" href="pricing.html"><div id="price-div">Pricing</div></a></div>
+            <div id="right">
+                <a id="a-tag" href="signIn.html"><div id="signin-div">Sign In</div></a>
+                <a id="a-tag" href="getdemo.html"><div id="demo-div">Get A Demo</div></a>
+                <div><button id="bar-button" onclick="shift()">Create My Calendar</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="orange-cal">
+        <div id="orange-mid">
+            <div id="mid-one">
+                <img  id="mid-one-img" src="https://coschedule.com/_next/image?url=%2Fimg%2Fproduct%2Fmarketing-calendar-product-icon.png&w=64&q=75" alt="">
+                <button id="market-button">Marketing Calendar</button>
+            </div>
+            <div id="mid-two">
+                <h1>Everything On One Calendar You Can Share</h1>
+                <p>Take control of your process. See all of your projects together. Show your progress.</p>
+            </div>
+            <div id="mid-three">
+                <button id="mid-create-button">create My Calendar</button>
+                <p>Get Started free</p>
+            </div>
+        </div>
+        <div id="img-brand">
+            <img id="img-mid" src="https://coschedule.com/_next/image?url=%2Fimg%2Fhome%2Fhome-calendar.png&w=1200&q=75"
+                alt="">
+        </div>
+    </div>
+    <div id="center-box">
+        <div id="c-1">
+            <p>See the big picture in one marketing calendar</p>
+        </div>
+        <div id="c-flex">
+            <div id="cf-1">
+                <h2>So you’ve got more marketing to manage. But how?</h2>
+                <p>Added responsibility leads to marketing chaos: total disorganization that leaves you feeling anxious, overwhelmed, and unsure how to handle all of your marketing.</p>
+                <h2>Handle it all in one actionable Marketing Calendar</h2>
+                <p>It’s your secret weapon to finally see, schedule, and share your marketing, all in a single calendar.</p>
+            </div>
+            <div id="cf-2">
+                <img src="https://coschedule.com/img/product/v7/marketing-calendar-3_v2.png" alt="">
+            </div>
+        </div>
+        <div id="c-3">
+            <p>"Before CoSchedule, everything was scattered between email and spreadsheets. With CoSchedule, I can easily organize all of my marketing and keep everyone on the same page."</p>
+            <h4>Beverly Cook, Director of Communications at NYC Leadership Center</h4>
+        </div>
+
+        <div id="again-orange">
+            <p>Take control, see all of your projects, and show your progress with Marketing Calendar</p>
+            <button id="again-orange-button">Create My Forever-Free Marketing Calendar</button>
+        </div>
+
+        <div id="next-orange">
+          <h1>Transform the way you work in just 14 days</h1>
+          <p>Join thousands of marketers who have totally organized their marketing in just 2 weeks.</p>
+          <button>Get started free</button>
+        </div>
+        <div id="next-img">
+            <img id="next-img-url" src="https://coschedule.com/img/product/v7/marketing-calendar-6.png" alt="">
+        </div>
+    </div> 
+    <div id="add-footer"></div>
+</body>
+</html>
+<script type="module">
+  
+//   import navbar from "/scripts/navbar.js" ;
+//   let nav = document.getElementById("navbar-main");
+
+//   nav.innerHTML = navbar();
+
+  import footer from "/scripts/footer.js" ;
+
+let foot = document.getElementById("add-footer");
+
+foot.innerHTML= footer();
+</script>
+<script>
+    document.getElementById("bar-logo-div").addEventListener("click",gohome);
+
+    function gohome(){
+
+        window.location.href = "index.html";
+    }
+</script>

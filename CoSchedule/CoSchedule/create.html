@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/create.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div id="main-center">
+        <div id="one">
+          <img id="demo-logo" src="https://coschedule.com/img/favicon.ico" alt="">
+          <p>CoSchedule</p>
+      </div>
+        <div id="two">
+            <h1>Create My Marketing Calendar</h1>
+            <p>Free for life. No credit card required.</p>
+        </div>
+        <div id="demo-block">
+            <p id="s-p">Full NAme</p>
+            <input id="demo-name" type="text" placeholder="Full Name">
+            <p id="s-p">Email Address</p>
+            <input id="demo-email" type="text" placeholder="Email address">
+            <p id="s-p">Company</p>
+            <input id="demo-comp" type="text" placeholder="Company Name">
+            <p id="s-p">Website URL</p>
+            <input id="demo-web" type="text" placeholder="Company website URL">
+            <p id="s-p">Password</p>
+            <input id="demo-password" type="text" placeholder="Company Password">
+            <br>
+            <button id="demo-button" onclick="display()">Get started now</button>
+            <p id="s-p">By signing up, you agree to CoSchedule’s terms of service, end user agreement, and privacy
+                policy; you are 16 years or older; and you will receive information from CoSchedule from which you can
+                opt out at any time.</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+    // document.getElementById("form").addEventListener("submit", display);
+
+    function display() {
+
+        // event.preventDefault();
+
+        let flag = true;
+
+        let name = document.getElementById('demo-name').value;
+
+        let email = document.getElementById("demo-email").value;
+
+        let company = document.getElementById("demo-comp").value;
+
+        let website = document.getElementById("demo-web").value;
+
+        let password = document.getElementById("demo-password").value;
+
+        if (name == "" || email == "" || password == "" || website=="" || company=="") {
+            alert("please fill all the details");
+            return;
+        }
+
+        let signup_details = {
+            "name": name,
+            "email": email,
+            "company":company,
+            "website": website,
+            "password": password,
+        }
+
+
+        let arr = localStorage.getItem("mylocal");
+
+
+        if (arr == null) {
+            arr = []
+
+        } else {
+            arr = JSON.parse(localStorage.getItem("mylocal"))
+            arr.forEach(el => {
+                if (el.email == signup_details.email) {
+                    alert("User already exist")
+                    flag = false;
+                    return;
+                }
+            });
+            if (flag == false) {
+                return;
+            }
+
+        }
+
+        arr.push(signup_details)
+        localStorage.setItem("mylocal", JSON.stringify(arr));
+        alert("Account Created")
+
+        window.location.href = "signIn.html"
+    }
+
+
+
+   
+
+document.getElementById("one").addEventListener("click",changeIt);
+
+
+function changeIt(){
+  window.location.href = "index.html";
+}
+
+</script>

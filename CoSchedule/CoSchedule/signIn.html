@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/signIn.css">
+    <style>
+        
+       
+    </style>
+</head>
+<body>
+    
+    <div id="sign-in-div">
+        <div id="s-flex-1"><img id="s-logo" src="https://coschedule.com/img/favicon.ico" alt="">
+        <h1>CoSchedule</h1></div>
+        
+        <p id="s-p">EMAIL ADDRESS</p>
+
+        <input id="email" type="text" placeholder="Email Address">
+       
+       <P id="s-p">PASSWORD</P>
+        
+        <input  id="password" type="text" placeholder="Password">
+      <br>
+
+        <button id="s-button" onclick="signIn()">Sign In</button>
+
+        <div id="s-flex">
+            <a href="create.html"><p id="s-p">Need an account?</p></a>
+            <p id="s-p">Forgot your password ?</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<script>
+    function signIn(){
+    let flag = true;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let  arr = JSON.parse(localStorage.getItem("mylocal"))
+    arr.forEach(el => {
+        
+        if(el.email == email && el.password == password){
+                flag = false;
+                return;
+            }
+    });
+        if(flag == false){
+            alert("login successful")
+            window.location.href = "index.html"
+        }else{
+                alert("Password unmatched")
+            }
+ }
+
+ document.getElementById("s-flex-1").addEventListener("click",changePage);
+
+     function changePage(){
+
+        window.location.href = "index.html";
+     }
+</script>

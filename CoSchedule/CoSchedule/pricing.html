@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/pricing.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="s-flex"><img id="s-logo" src="https://coschedule.com/img/favicon.ico" alt="">
+            <h1>CoSchedule</h1></div>
+    </div>
+    <div id="top-text">
+        <p id="text-xl">Organize Your Marketing With Content Calendar Software by CoSchedule</p>
+        <p id="text-s">Try it free. No credit card required.</p>
+    </div>
+    <div id="three-block">
+        <div id="block-one">
+            <div id="first">
+                <h3>Marketing Calendar</h3>
+                <h1>Free</h1>
+                <p>The forever-free marketing calendar to see everything in one place.</p>
+            </div>
+            <div id="second">
+                <h1>$0</h1>
+                <h3>Free Forever</h3>
+            </div>
+            <div id="third">
+                <button id="third-button">Get Started Free</button>
+            </div>
+            <div id="forth-f">
+                <ul>
+                    <li>Personal Project & Task Management</li>
+                    <li>Unlimited Marketing Projects and content</li>
+                    <li>Marketing & Project Management Integrations</li>
+                    <li>Social Media Publishing</li>
+                    <li>Self-Serve Knowledge Base</li>
+                    <li>Basic Support</li>
+                </ul>
+            </div>
+        </div>
+        <div id="block-two">
+            <div id="first">
+                <h3>Marketing Calendar</h3>
+                <h1>Pro</h1>
+                <p>The advanced marketing calendar with limitless publishing to gain even more control.</p>
+            </div>
+            <div id="second">
+                <h1>$29</h1>
+                <h3>per user / month</h3>
+            </div>
+            <div id="third">
+                <button id="third-button">Get Started Free</button>
+            </div>
+            <div id="forth-m">
+                <ul>
+                    <li>Real-Time Marketing Calendar</li>
+                    <li>Simultaneous Team Member Access & Collaboration</li>
+                    <li>Bulk Social Media Scheduling</li>
+                    <li>Personal Project & Task Management</li>
+                    <li>Unlimited Marketing Projects and content</li>
+                    <li>Marketing & Project Management Integrations</li>
+                    <li>Social Media Publishing</li>
+                    <li>Self-Serve Knowledge Base</li>
+                    <li>Basic Support</li>
+                </ul>
+            </div>
+        </div>
+        <div id="block-three">
+            <div id="first">
+                <h3>Marketing Calendar</h3>
+                <h1>Business</h1>
+                <p>A family of agile marketing products to complete more work and prove your team’s value.</p>
+            </div>
+            <div id="second">
+                <h1>Let's Talk</h1>
+                <h3></h3>
+            </div>
+            <div id="third">
+                <button id="third-button">Get Started Free</button>
+            </div>
+            <div id="forth-l">
+                <ul>
+                    <li>1:1 Customer Success Management</li>
+                    <li>Calendar Team Filtering</li>
+                    <li>Real-Time Marketing Calendar</li>
+                    <li>Simultaneous Team Member Access & Collaboration</li>
+                    <li>Bulk Social Media Scheduling</li>
+                    <li>Personal Project & Task Management</li>
+                    <li>Unlimited Marketing Projects and content</li>
+                    <li>Personal Project & Task Management</li>
+                    <li>Unlimited Marketing Projects and content</li>
+                    <li>Marketing & Project Management Integrations</li>
+                    <li>Social Media Publishing</li>
+                    <li>Self-Serve Knowledge Base</li>
+                    <li>Basic Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="pricing-footer"></div>
+</body>
+</html>
+<script type="module">
+
+    import footer from "/scripts/footer.js";
+
+  let foot = document.getElementById("pricing-footer");
+  foot.innerHTML = footer();
+
+</script>
+<script>
+
+    document.getElementById("s-flex").addEventListener("click",changeIt);
+  
+  
+    function changeIt(){
+      window.location.href = "index.html";
+    }
+  </script>
